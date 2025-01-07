@@ -1,6 +1,5 @@
 import time
-from Suumo.GetInfo_Suumo import GetInfo_Suumo
-from GetInfo_Homes import GetInfo_Homes
+from GetInfo import GetInfo
 from Common_Mod.ToExcel import ToExcel
 from Common_Mod.Configs import SuumoTags, HomesTags
 
@@ -30,17 +29,25 @@ def main(tag, get_info_func):
     to_excel.list_to_excel()
 
 # Suumo用のget_info_func関数
-def get_suumo_info(tag):
-    getinfo = GetInfo_Suumo(tag)
+def get_homes_info(tag):
+    print(f"Creating GetInfo with data={tag}, should_get_price=True, should_get_room_info=False")
+    getinfo = GetInfo(
+        data=tag,
+        should_get_price=True, # 修正された引数名を使用 
+        should_get_room_info=False) # 修正された引数名を使用
     return getinfo.get_info_data()
 
 # Homes用のget_info_func関数
-def get_homes_info(tag):
-    getinfo = GetInfo_Homes(tag)
+def get_suumo_info(tag):
+    print(f"Creating GetInfo with data={tag}, should_get_price=False, should_get_room_info=True")
+    getinfo = GetInfo(
+        data=tag,
+        should_get_price=False, # 修正された引数名を使用 
+        should_get_room_info=True) # 修正された引数名を使用)
     return getinfo.get_info_data()
 
 if __name__ == "__main__":
     # SuumoTagまたはHomesTagのインスタンスを渡す
-    tag = HomesTags()
+    tag = SuumoTags()
     # メイン関数に情報取得関数を引数として渡す
-    main(tag, get_homes_info)
+    main(tag, get_suumo_info)
