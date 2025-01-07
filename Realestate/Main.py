@@ -1,5 +1,5 @@
 import time
-from GetInfo import GetInfo
+from Common_Mod.GetInfo import GetInfo
 from Common_Mod.ToExcel import ToExcel
 from Common_Mod.Configs import SuumoTags, HomesTags
 

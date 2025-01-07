@@ -10,3 +10,4 @@ class RoomInfoModel:
     layout: str = ""    
     detail_url: str = "" 
     deposit: str = ""
+    management_fee: str = ""
