@@ -1,32 +1,32 @@
-# Real_Estate
+# 概要
+"Real_Estate" はSuumoやat homeなどの不動産ポータルサイトから賃貸住宅情報を自動で取得するプログラムです。
 
-"Real_Estate" is a code that automatically retrieves rental housing information from real estate portal sites such as Suumo and at home.
 
-# Features
-"Real_Estate" is based on object-oriented design. It has high readability and allows for easy information retrieval from multiple sites by simply switching configuration information.
+# 特徴
+このプログラムはオブジェクト指向に基づいて作成されています。
+コンフィグ情報をスイッチするだけで複数のサイトの賃貸情報の取得が簡単に行えます。
 
-# Required Libraries and Modules
-To run this project, you'll need the following libraries and modules:
-*Python 3.6 or higher: The project requires at least Python version 3.6.
-*time: A standard Python library used for time measurement and operations.
-*pandas: A data analysis library used for data manipulation and processing.
-*requests: A library for making HTTP requests, used for retrieving data from the web.
-*BeautifulSoup: A library for parsing HTML and XML, used for web scraping.
+# 必要な環境
+このプロジェクトを実行するためには、以下のライブラリとモジュールが必要です：
+time: Pythonの標準ライブラリで、時間計測などに使用されます。
+pandas: データ解析ライブラリで、データの操作や処理に使用されます。
+requests: HTTPリクエストを行うためのライブラリで、ウェブからのデータ取得に使用されます。
+BeautifulSoup: HTMLやXMLの解析ライブラリで、ウェブスクレイピングに使用されます。
 
-# Installation
-You can install these required libraries and modules by running the following command:
-
+# インストール方法
+以下のコマンドを実行して、必要なライブラリとモジュールをインストールすることができます。
 ```bash
 pip install pandas requests beautifulsoup4
 ```
-# Note 
-I don't test environments under Linux and Mac.
 
-# Author
- 
+# 注意
+LinuxおよびMac環境ではテストしていません。
+
+# 著者
 * Fumihiro
 
-I hope this will be helpful for efficiently obtaining rental information.
+賃貸情報の効率的な取得のお役に立てれば幸いです。
+よろしくお願いいたします。
 
 
 
